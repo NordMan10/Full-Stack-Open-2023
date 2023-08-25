@@ -6,7 +6,7 @@ sequenceDiagram
 	browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
 	activate server
 	Note left of server: The server saves new data in `notes` array and responses with, among other things, code 302, redirect address and payload as form data
-    	server-->>browser: HTML page with no HTML content
+    	server-->>browser: HTML page with the mentioned data and without HTML content
     	deactivate server
 
     	browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
